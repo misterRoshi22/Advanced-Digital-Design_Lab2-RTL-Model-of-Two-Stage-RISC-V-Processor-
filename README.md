@@ -2,7 +2,7 @@
 RTL model of a two-stage pipelined RISC-V-v2 (a subset of the RISC-V instruction set) processor.
 
 # Control Signals
-| Instruction | OpCode  | ALUOp | RegWrite | ALUSrc | MemRead | MemWrite | MemToReg | Branch | Jump |
+| **Instruction** | **OpCode** | **ALUOp** | **RegWrite** | **ALUSrc** | **MemRead** | **MemWrite** | **MemToReg** | **Branch** | **Jump** |
 | ----------- | ------- | ----- | -------- | ------ | ------- | -------- | -------- | ------ | ---- |
 | ADDI        | 0010011 | 0000  | 1        | 1      | 0       | 0        | 00       | 0000   | 00   |
 | SLLI        | 0010011 | 00001 | 1        | 1      | 0       | 0        | 00       | 0000   | 00   |
