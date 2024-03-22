@@ -14,5 +14,4 @@ int main(void) {
     sum += lab;
 
     int avg = sum/16;
-    cout << avg << endl;
 }
