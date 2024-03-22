@@ -5,7 +5,7 @@
 - On reset, register sp (x2) will be set to 1024.
 - Supports static branch prediction, always assuming not taken.
 - Branch misprediction leads to a 1-cycle delay.
-- On branch misprediction, the register gets flushed.
+- On branch misprediction, REG gets flushed.
 - Branch instructions utilize the ALU, using SUB, SLT, SLTU.
 - Data Memory: 2Kx8 Bits
 - Instruction Memory: 2Kx8 Bits
