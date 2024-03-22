@@ -1,13 +1,15 @@
 # Lab2_RTL-Model-of-Two-Stage-RISC-V-Processor
-RTL model of a two-stage pipelined RISC-V-v2 (a subset of the RISC-V instruction set) processor.
-Register x0 always equal to 0
-On reset register sp (x2) will be set to 1024
-Supports static branch prediction -> Always assume not takes
-Branch misprediction leads to 1 cycle delay
-On branch misprediction REG gets flushed
-Branch instructions utilize the ALU -> Using SUB, SLT, SLTU 
-Data Memory -> 2Kx8 Bits
-Instruction Memory -> 2Kx8 Bits
+## RTL Model of a Two-Stage Pipelined RISC-V-v2 Processor
+
+- Register x0 always equals 0.
+- On reset, register sp (x2) will be set to 1024.
+- Supports static branch prediction, always assuming not taken.
+- Branch misprediction leads to a 1-cycle delay.
+- On branch misprediction, the register gets flushed.
+- Branch instructions utilize the ALU, using SUB, SLT, SLTU.
+- Data Memory: 2Kx8 Bits
+- Instruction Memory: 2Kx8 Bits
+
 
 
 
