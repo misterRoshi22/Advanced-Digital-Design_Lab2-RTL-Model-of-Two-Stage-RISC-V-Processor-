@@ -1,6 +1,7 @@
 # Lab2_RTL-Model-of-Two-Stage-RISC-V-Processor
 RTL model of a two-stage pipelined RISC-V-v2 (a subset of the RISC-V instruction set) processor.
 
+#Control Signals
 | Instruction | OpCode  | ALUOp | RegWrite | ALUSrc | MemRead | MemWrite | MemToReg | Branch | Jump |
 | ----------- | ------- | ----- | -------- | ------ | ------- | -------- | -------- | ------ | ---- |
 | ADDI        | 0010011 | 0000  | 1        | 1      | 0       | 0        | 00       | 0000   | 00   |
@@ -32,3 +33,17 @@ RTL model of a two-stage pipelined RISC-V-v2 (a subset of the RISC-V instruction
 | BGEU        | 1100011 | 0011  | 0        | 1      | 0       | 0        | 00       | 1111   | 00   |
 | LW          | 0000011 | 0000  | 1        | 1      | 1       | 0        | 01       | 0000   | 00   |
 | SW          | 0100011 | 0000  | 0        | 1      | 0       | 1        | 00       | 0000   | 00   |
+
+#ALU Operations
+| ALUOp | Operation |
+| ----- | --------- |
+| 0000  | ADD       |
+| 0001  | SLL       |
+| 0010  | SLT       |
+| 0011  | SLTU      |
+| 0100  | XOR       |
+| 0101  | SRL       |
+| 0110  | OR        |
+| 0111  | AND       |
+| 1000  | SUB       |
+| 1001  | LUI       |
