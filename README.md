@@ -35,7 +35,7 @@ RTL model of a two-stage pipelined RISC-V-v2 (a subset of the RISC-V instruction
 | SW          | 0100011 | 0000  | 0        | 1      | 0       | 1        | 00       | 0000   | 00   |
 
 # ALU Operations
-| ALUOp | Operation |
+| **ALUOp** | **Operation** |
 | ----- | --------- |
 | 0000  | ADD       |
 | 0001  | SLL       |
