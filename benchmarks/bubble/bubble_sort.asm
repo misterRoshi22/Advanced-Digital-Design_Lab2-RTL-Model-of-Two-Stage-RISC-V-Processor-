@@ -6,7 +6,7 @@ slli t4 t3 2
 add t4 t4 t0
 lw t5 0 t4
 lw t6 4 t4
-ble t5 t6 2
+bge t6 t5 6
 sw t6 0 t4
 sw t5 4 t4
 addi t2 x0 0
@@ -14,3 +14,4 @@ addi t3 t3 1
 bne t3 t1 -20
 beq t2 x0 -26
 addi a0 x0 22
+add x0 x0 x0
