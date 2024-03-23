@@ -1,7 +1,7 @@
 module pc_control(branch, jump, jalr, pc_mux_select);
 
 	input branch, jump, jalr;		//inputs from EXE stage used to determine if we should jump or not
-	output reg [1:0] pc_mux_select;	//pc_mux select line used to determine input to mux
+	output reg [1:0] pc_mux_select;		//pc_mux select line used to determine input to mux
 	
 	//assuming that only one of the inputs is high (which should be true under the right conditions)
 	always@(*) begin
