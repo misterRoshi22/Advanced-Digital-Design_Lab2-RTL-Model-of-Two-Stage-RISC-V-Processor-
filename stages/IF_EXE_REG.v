@@ -2,23 +2,23 @@ module IF_EXE_REG(clk, reset_n, flush, instruction_in, pc_in, pc_plus_4_in,
 instruction, pc, pc_plus_4, opcode,
  rs1, rs2, rd, funct3, add_sub);
 
-	input 					clk, reset_n;
+	input 			clk, reset_n;
 	
-	input 					flush;
+	input 			flush;
 	
 	input 		[31:0] 	instruction_in;
 	input 		[10:0] 	pc_in;
 	input 		[10:0] 	pc_plus_4_in;
 	
-	output reg	[31:0]	instruction;		//used for immediate generation
+	output reg	[31:0]	instruction;				//used for immediate generation
 	output reg	[10:0] 	pc;					//used to calculate branch target
-	output reg	[10:0] 	pc_plus_4;			//used to store incase of jalr
+	output reg	[10:0] 	pc_plus_4;				//used to store incase of jalr
 	
-	output reg	[6:0] 	opcode;				//used in control unit
-	output reg	[4:0] 	rs1, rs2, rd;		//operands for alu
+	output reg	[6:0] 	opcode;					//used in control unit
+	output reg	[4:0] 	rs1, rs2, rd;				//operands for alu
 	
-	output reg	[2:0] 	funct3;				//used to determine alu mode of operation
-	output reg				add_sub;
+	output reg	[2:0] 	funct3;					//used to determine alu mode of operation
+	output reg		add_sub;
 	
 	always@(negedge clk) begin
 	
