@@ -1,4 +1,4 @@
-module mux_4to1(A, B, C, D,  S, M);
+module mux_4to1(A, B, C, D, S, M);
 
 	parameter AB_width = 32;
 	input  [AB_width-1:0] A, C;
