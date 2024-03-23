@@ -1,11 +1,11 @@
 module alu(A, B, ALU_Result, ALUOpCode, Zero);
  
 	
-	input 		[31:0] 	A, B; 					// Operands
-	input 		[3:0]		ALUOpCode;				// Operation
+	input 		[31:0] 	A, B; 				// Operands
+	input 		[3:0]	ALUOpCode;			// Operation
 	
 	output reg	[31:0] 	ALU_Result; 			// Result
-	output reg 				Zero; 					// Zero flag
+	output reg 		Zero; 				// Zero flag
 
 	always @ (ALUOpCode or A or B) begin
 	
@@ -38,7 +38,7 @@ module alu(A, B, ALU_Result, ALUOpCode, Zero);
 				4'b0111:	// AND
 				ALU_Result = A & B;
 				
-				4'b1000:	//	SUB
+				4'b1000:	// SUB
 				ALU_Result = $signed(A) - $signed(B);
 				
 				4'b1001:	// LUI
