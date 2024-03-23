@@ -1,29 +1,29 @@
 module cpu(clk, reset_n);
 
-	input clk, reset_n; 	//Universal Inputs
+	input 		clk, reset_n; 	//Universal Inputs
 	
 	//Reference Voltages
-	wire VCC, GND;
+	wire 		VCC, GND;
 	
 	//IF -> REG
-	wire [31:0] instruction_if;
-	wire [10:0] pc_if, pc_plus_4_if;
+	wire [31:0] 	instruction_if;
+	wire [10:0] 	pc_if, pc_plus_4_if;
 	
 	//REG -> EXE
 	wire [31:0]	instruction_reg;
-	wire [10:0] pc_reg, pc_plus_4_reg;
-	wire [6:0]  opcode_reg;
+	wire [10:0] 	pc_reg, pc_plus_4_reg;
+	wire [6:0]  	opcode_reg;
 	wire [4:0]	rs1_reg, rs2_reg, rd_reg;
 	wire [2:0]	funct3_reg;
-	wire 			add_sub_reg;
+	wire 		add_sub_reg;
 	
 	
 	//EXE -> IF
-	wire [10:0] branch_address_exe, jump_address_exe, jalr_address_exe;
+	wire [10:0] 	branch_address_exe, jump_address_exe, jalr_address_exe;
 	wire  		branch_exe, jump_exe, jalr_exe;
 	
 	//EXE -> REG
-	wire			flush_exe;
+	wire		flush_exe;
 	
 	FETCH if_stage(clk, reset_n, branch_exe, jump_exe, jalr_exe,
 	branch_address_exe, jump_address_exe, jalr_address_exe,
