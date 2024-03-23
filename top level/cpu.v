@@ -1,6 +1,7 @@
 module cpu(clk, reset_n);
 
-	input 		clk, reset_n; 	//Universal Inputs
+	//Universal Inputs
+	input 		clk, reset_n; 	
 	
 	//Reference Voltages
 	wire 		VCC, GND;
