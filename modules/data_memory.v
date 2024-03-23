@@ -1,17 +1,17 @@
 module data_memory(clk, reset_n, address,
 write_enable, read_enable, write_data, read_data);
 
-	input clk;									//CLOCK
-	input reset_n;								//Universal Reset
-   input [10:0] address;					//Address used for reading and writing
-   input [31:0] write_data;				//Store Byte/Word
-	input read_enable; 						//1 in case of SW 
-   input write_enable;						//1 in case of LW
-   output reg [31:0] read_data;			//Load Byte/Word
+	input 			clk;				//CLOCK
+	input 			reset_n;			//Universal Reset
+   	input [10:0] 		address;			//Address used for reading and writing
+   	input [31:0] 		write_data;			//Store Byte/Word
+	input 			read_enable; 			//1 in case of SW 
+   	input 			write_enable;			//1 in case of LW
+   	output reg [31:0] 	read_data;			//Load Byte/Word
 	 
-   reg [7:0] memory[0:2047];				//the 2048 registers comprising the data memory
+   	reg [7:0] memory[0:2047];				//the 2048 registers comprising the data memory
 	 
-	wire [10:0] add0, add1, add2, add3;	//Addresses used to read individual words
+	wire [10:0] add0, add1, add2, add3;			//Addresses used to read individual words
 	integer i;
 	 
 	//Round down the address to nearest word as word alignment might not gaurenteed
